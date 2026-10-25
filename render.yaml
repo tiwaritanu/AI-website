@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: mindspace-ai
+    runtime: node
+    plan: free
+    buildCommand: npm install && npm install --prefix client && npm install --prefix server && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
